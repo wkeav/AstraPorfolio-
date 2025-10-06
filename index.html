@@ -42,53 +42,289 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- Custom CSS for Personal Section -->
+	<!-- Custom CSS for 80s Retro-Futuristic Theme -->
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+		
+		:root {
+			--retro-purple: #2d1b4e;
+			--retro-magenta: #8b2c7a;
+			--retro-orange: #ff6b35;
+			--retro-red: #d63031;
+			--retro-cyan: #00d2d3;
+			--retro-pink: #fd79a8;
+			--retro-dark: #1a1a2e;
+			--retro-text: #ffffff;
+			--retro-accent: #ffd700;
+		}
+
+		/* Global Background with Grainy Texture */
+		body {
+			background: linear-gradient(180deg, var(--retro-purple) 0%, var(--retro-magenta) 30%, var(--retro-orange) 70%, var(--retro-red) 100%) !important;
+			background-attachment: fixed !important;
+			position: relative !important;
+			font-family: 'Rajdhani', sans-serif !important;
+		}
+
+		body::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: 
+				radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+				radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+				radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+			background-size: 50px 50px, 80px 80px, 60px 60px;
+			opacity: 0.3;
+			pointer-events: none;
+			z-index: 1;
+		}
+
+		/* Sidebar Styling */
+		#colorlib-aside {
+			background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(45, 27, 78, 0.95) 100%) !important;
+			border-right: 2px solid var(--retro-cyan) !important;
+			backdrop-filter: blur(10px) !important;
+			box-shadow: 0 0 30px rgba(0, 210, 211, 0.3) !important;
+		}
+
+		#colorlib-aside .author-img {
+			border: 3px solid var(--retro-cyan) !important;
+			box-shadow: 0 0 20px rgba(0, 210, 211, 0.5) !important;
+		}
+
+		#colorlib-aside h1 a {
+			color: var(--retro-text) !important;
+			font-family: 'Orbitron', monospace !important;
+			font-weight: 900 !important;
+			text-shadow: 0 0 10px var(--retro-cyan) !important;
+		}
+
+		#colorlib-aside .position {
+			color: var(--retro-accent) !important;
+			font-weight: 600 !important;
+		}
+
+		/* Navigation */
+		#colorlib-main-menu ul li a {
+			color: var(--retro-text) !important;
+			font-weight: 500 !important;
+			text-transform: uppercase !important;
+			letter-spacing: 1px !important;
+		}
+
+		#colorlib-main-menu ul li a:hover,
+		#colorlib-main-menu ul li.active a {
+			color: var(--retro-cyan) !important;
+			text-shadow: 0 0 10px var(--retro-cyan) !important;
+		}
+
+		/* Sections */
+		.colorlib-about,
+		.colorlib-experience,
+		.colorlib-projects,
+		.colorlib-education,
+		.colorlib-personal,
+		.colorlib-contact {
+			background: rgba(26, 26, 46, 0.8) !important;
+			backdrop-filter: blur(10px) !important;
+			border: 1px solid rgba(0, 210, 211, 0.3) !important;
+		}
+
+		/* Headings */
+		.colorlib-heading {
+			color: var(--retro-text) !important;
+			font-family: 'Orbitron', monospace !important;
+			font-weight: 700 !important;
+			text-shadow: 0 0 15px var(--retro-cyan) !important;
+		}
+
+		.heading-meta {
+			color: var(--retro-accent) !important;
+			font-weight: 600 !important;
+			text-transform: uppercase !important;
+			letter-spacing: 2px !important;
+		}
+
+		/* Timeline */
+		.timeline-entry .timeline-label h2 a {
+			color: var(--retro-text) !important;
+			font-weight: 600 !important;
+		}
+
+		.timeline-entry .timeline-label span {
+			color: var(--retro-cyan) !important;
+			font-weight: 500 !important;
+		}
+
+		.timeline-entry .timeline-label p {
+			color: var(--retro-text) !important;
+		}
+
+		/* Project Cards */
+		.project-item {
+			background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(45, 27, 78, 0.9) 100%) !important;
+			border-left: 4px solid var(--retro-cyan) !important;
+			box-shadow: 0 0 20px rgba(0, 210, 211, 0.3) !important;
+			backdrop-filter: blur(10px) !important;
+		}
+
+		.project-item h3 a {
+			color: var(--retro-cyan) !important;
+			font-family: 'Orbitron', monospace !important;
+			font-weight: 700 !important;
+			text-shadow: 0 0 10px var(--retro-cyan) !important;
+		}
+
+		.project-item p,
+		.project-item ul {
+			color: var(--retro-text) !important;
+		}
+
+		.project-item .icon a {
+			color: var(--retro-accent) !important;
+			font-weight: 600 !important;
+		}
+
+		/* Services/About Cards */
+		.services {
+			background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(139, 44, 122, 0.8) 100%) !important;
+			border: 2px solid var(--retro-cyan) !important;
+			box-shadow: 0 0 15px rgba(0, 210, 211, 0.4) !important;
+		}
+
+		.services h3 {
+			color: var(--retro-text) !important;
+			font-family: 'Orbitron', monospace !important;
+			font-weight: 600 !important;
+		}
+
+		/* Personal Section */
 		.personal-description {
 			font-size: 18px;
 			line-height: 1.8;
 			margin-bottom: 30px;
-			color: #666;
+			color: var(--retro-text);
 		}
-		.personal-highlights {
-			margin: 40px 0;
-		}
+
 		.personal-item {
 			padding: 30px 20px;
 			text-align: center;
-			background: #f8f9fa;
-			border-radius: 10px;
+			background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(45, 27, 78, 0.9) 100%);
+			border-radius: 15px;
 			margin-bottom: 20px;
 			transition: all 0.3s ease;
-			border: 2px solid transparent;
+			border: 2px solid var(--retro-cyan);
+			box-shadow: 0 0 20px rgba(0, 210, 211, 0.3);
 		}
+
 		.personal-item:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 10px 25px rgba(44, 152, 240, 0.15);
-			border-color: #2c98f0;
+			box-shadow: 0 0 30px rgba(0, 210, 211, 0.6);
+			border-color: var(--retro-accent);
 		}
+
 		.personal-item h4 {
 			margin: 15px 0 10px 0;
-			color: #2c98f0;
+			color: var(--retro-accent);
 			font-weight: 600;
+			font-family: 'Orbitron', monospace;
 		}
+
 		.personal-item p {
-			color: #666;
+			color: var(--retro-text);
 			font-size: 14px;
 			line-height: 1.6;
 		}
-		.personal-cta {
-			margin-top: 40px;
+
+		/* Buttons */
+		.btn-primary {
+			background: linear-gradient(135deg, var(--retro-cyan) 0%, var(--retro-pink) 100%) !important;
+			border: none !important;
+			color: var(--retro-dark) !important;
+			font-weight: 600 !important;
+			text-transform: uppercase !important;
+			letter-spacing: 1px !important;
+			box-shadow: 0 0 15px rgba(0, 210, 211, 0.5) !important;
 		}
-		.personal-cta .btn {
-			padding: 15px 30px;
-			font-size: 16px;
-			font-weight: 500;
-			transition: all 0.3s ease;
-		}
-		.personal-cta .btn:hover {
+
+		.btn-primary:hover {
+			background: linear-gradient(135deg, var(--retro-pink) 0%, var(--retro-cyan) 100%) !important;
 			transform: translateY(-2px);
-			box-shadow: 0 5px 15px rgba(44, 152, 240, 0.3);
+			box-shadow: 0 0 25px rgba(0, 210, 211, 0.8) !important;
+		}
+
+		/* Social Links */
+		.social-icon {
+			color: var(--retro-cyan) !important;
+		}
+
+		.social-icon:hover {
+			color: var(--retro-accent) !important;
+			text-shadow: 0 0 10px var(--retro-accent) !important;
+		}
+
+		/* Education Accordion */
+		.panel-default {
+			background: rgba(26, 26, 46, 0.9) !important;
+			border: 2px solid var(--retro-cyan) !important;
+		}
+
+		.panel-heading {
+			background: linear-gradient(135deg, rgba(45, 27, 78, 0.9) 0%, rgba(139, 44, 122, 0.9) 100%) !important;
+		}
+
+		.panel-title a {
+			color: var(--retro-text) !important;
+			font-family: 'Orbitron', monospace !important;
+			font-weight: 600 !important;
+		}
+
+		.panel-body {
+			background: rgba(26, 26, 46, 0.8) !important;
+		}
+
+		/* Contact Form */
+		.form-control {
+			background: rgba(26, 26, 46, 0.8) !important;
+			border: 2px solid var(--retro-cyan) !important;
+			color: var(--retro-text) !important;
+		}
+
+		.form-control:focus {
+			border-color: var(--retro-accent) !important;
+			box-shadow: 0 0 15px rgba(255, 215, 0, 0.5) !important;
+		}
+
+		/* Footer */
+		.colorlib-footer {
+			background: rgba(26, 26, 46, 0.9) !important;
+			border-top: 2px solid var(--retro-cyan) !important;
+		}
+
+		.colorlib-footer p {
+			color: var(--retro-text) !important;
+		}
+
+		.colorlib-footer ul li a {
+			color: var(--retro-cyan) !important;
+		}
+
+		.colorlib-footer ul li a:hover {
+			color: var(--retro-accent) !important;
+		}
+
+		/* Add some retro glow effects */
+		.about-desc p {
+			color: var(--retro-text) !important;
+		}
+
+		/* Timeline icons */
+		.timeline-icon {
+			box-shadow: 0 0 15px rgba(0, 210, 211, 0.5) !important;
 		}
 	</style>
 
@@ -167,7 +403,7 @@
 											<div class="desc">
 												<h1>I am looking for a Software Engineer internship!</h1>
 												<h2>I'm a passionate and hardworking individual </h2>
-												<p><a href="https://drive.google.com/file/d/1Bl2c0PPjPlxRUfRJK0ZbLniYkByvlhWz/view?usp=drive_link" class="btn btn-primary btn-learn" target="_blank" rel="noopener noreferrer" style="cursor: pointer;">View Resume <i class="icon-briefcase3"></i></a></p>
+												<p><a href="https://drive.google.com/file/d/15c_c9JR8Dz2QCeZFVEYGwVVjIRzUKxQk/view?usp=drive_link" class="btn btn-primary btn-learn" target="_blank" rel="noopener noreferrer" style="cursor: pointer;">View Resume <i class="icon-briefcase3"></i></a></p>
 											</div>
 										</div>
 									</div>
