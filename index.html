@@ -42,217 +42,53 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- Custom CSS for Soft Indie Theme -->
+	<!-- Custom CSS for Personal Section -->
 	<style>
-		:root {
-			--indie-bg: #f0f2f0;
-			--indie-accent: #a8b5a8;
-			--indie-text: #7a8a7a;
-			--indie-light: #e8ebe8;
-			--indie-warm: #d8d4c8;
-			--indie-soft-blue: #b8c4c8;
-			--indie-soft-green: #b0c0b0;
-		}
-
-		/* Global Background */
-		body {
-			background-color: var(--indie-bg) !important;
-		}
-
-		/* Sidebar Styling */
-		#colorlib-aside {
-			background: linear-gradient(135deg, var(--indie-light) 0%, var(--indie-warm) 100%) !important;
-			border-right: 1px solid var(--indie-accent) !important;
-		}
-
-		#colorlib-aside .author-img {
-			border: 3px solid var(--indie-accent) !important;
-		}
-
-		#colorlib-aside h1 a {
-			color: var(--indie-text) !important;
-		}
-
-		#colorlib-aside .position {
-			color: var(--indie-accent) !important;
-		}
-
-		/* Navigation */
-		#colorlib-main-menu ul li a {
-			color: var(--indie-text) !important;
-		}
-
-		#colorlib-main-menu ul li a:hover,
-		#colorlib-main-menu ul li.active a {
-			color: var(--indie-accent) !important;
-		}
-
-		/* Sections */
-		.colorlib-about,
-		.colorlib-experience,
-		.colorlib-projects,
-		.colorlib-education,
-		.colorlib-personal,
-		.colorlib-contact {
-			background-color: var(--indie-bg) !important;
-		}
-
-		/* Headings */
-		.colorlib-heading {
-			color: var(--indie-text) !important;
-		}
-
-		.heading-meta {
-			color: var(--indie-accent) !important;
-		}
-
-		/* Timeline */
-		.timeline-entry .timeline-label h2 a {
-			color: var(--indie-text) !important;
-		}
-
-		.timeline-entry .timeline-label span {
-			color: var(--indie-accent) !important;
-		}
-
-		.timeline-entry .timeline-label p {
-			color: var(--indie-text) !important;
-		}
-
-		/* Project Cards */
-		.project-item {
-			background: linear-gradient(135deg, var(--indie-light) 0%, #ffffff 100%) !important;
-			border-left: 4px solid var(--indie-soft-green) !important;
-			box-shadow: 0 4px 15px rgba(139, 154, 139, 0.1) !important;
-		}
-
-		.project-item h3 a {
-			color: var(--indie-soft-green) !important;
-		}
-
-		.project-item p,
-		.project-item ul {
-			color: var(--indie-text) !important;
-		}
-
-		.project-item .icon a {
-			color: var(--indie-soft-green) !important;
-		}
-
-		/* Services/About Cards */
-		.services {
-			background: linear-gradient(135deg, var(--indie-light) 0%, var(--indie-warm) 100%) !important;
-			border: 1px solid var(--indie-accent) !important;
-		}
-
-		.services h3 {
-			color: var(--indie-text) !important;
-		}
-
-		/* Personal Section */
 		.personal-description {
 			font-size: 18px;
 			line-height: 1.8;
 			margin-bottom: 30px;
-			color: var(--indie-text);
+			color: #666;
 		}
-
+		.personal-highlights {
+			margin: 40px 0;
+		}
 		.personal-item {
 			padding: 30px 20px;
 			text-align: center;
-			background: linear-gradient(135deg, var(--indie-light) 0%, var(--indie-warm) 100%);
-			border-radius: 15px;
+			background: #f8f9fa;
+			border-radius: 10px;
 			margin-bottom: 20px;
 			transition: all 0.3s ease;
-			border: 2px solid var(--indie-accent);
+			border: 2px solid transparent;
 		}
-
 		.personal-item:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 10px 25px rgba(139, 154, 139, 0.2);
-			border-color: var(--indie-soft-green);
+			box-shadow: 0 10px 25px rgba(44, 152, 240, 0.15);
+			border-color: #2c98f0;
 		}
-
 		.personal-item h4 {
 			margin: 15px 0 10px 0;
-			color: var(--indie-soft-green);
+			color: #2c98f0;
 			font-weight: 600;
 		}
-
 		.personal-item p {
-			color: var(--indie-text);
+			color: #666;
 			font-size: 14px;
 			line-height: 1.6;
 		}
-
-		/* Buttons */
-		.btn-primary {
-			background: linear-gradient(135deg, var(--indie-soft-green) 0%, var(--indie-accent) 100%) !important;
-			border: none !important;
-			color: white !important;
+		.personal-cta {
+			margin-top: 40px;
 		}
-
-		.btn-primary:hover {
-			background: linear-gradient(135deg, var(--indie-accent) 0%, var(--indie-soft-green) 100%) !important;
+		.personal-cta .btn {
+			padding: 15px 30px;
+			font-size: 16px;
+			font-weight: 500;
+			transition: all 0.3s ease;
+		}
+		.personal-cta .btn:hover {
 			transform: translateY(-2px);
-			box-shadow: 0 5px 15px rgba(139, 154, 139, 0.3);
-		}
-
-		/* Social Links */
-		.social-icon {
-			color: var(--indie-soft-green) !important;
-		}
-
-		.social-icon:hover {
-			color: var(--indie-accent) !important;
-		}
-
-		/* Education Accordion */
-		.panel-default {
-			background: var(--indie-light) !important;
-			border: 1px solid var(--indie-accent) !important;
-		}
-
-		.panel-heading {
-			background: linear-gradient(135deg, var(--indie-warm) 0%, var(--indie-light) 100%) !important;
-		}
-
-		.panel-title a {
-			color: var(--indie-text) !important;
-		}
-
-		.panel-body {
-			background: var(--indie-bg) !important;
-		}
-
-		/* Contact Form */
-		.form-control {
-			background: var(--indie-light) !important;
-			border: 1px solid var(--indie-accent) !important;
-			color: var(--indie-text) !important;
-		}
-
-		.form-control:focus {
-			border-color: var(--indie-soft-green) !important;
-			box-shadow: 0 0 0 0.2rem rgba(139, 154, 139, 0.25) !important;
-		}
-
-		/* Footer */
-		.colorlib-footer {
-			background: var(--indie-light) !important;
-			border-top: 1px solid var(--indie-accent) !important;
-		}
-
-		.colorlib-footer p {
-			color: var(--indie-text) !important;
-		}
-
-		.colorlib-footer ul li a {
-			color: var(--indie-accent) !important;
-		}
-
-		.colorlib-footer ul li a:hover {
-			color: var(--indie-soft-green) !important;
+			box-shadow: 0 5px 15px rgba(44, 152, 240, 0.3);
 		}
 	</style>
 
@@ -331,7 +167,7 @@
 											<div class="desc">
 												<h1>I am looking for a Software Engineer internship!</h1>
 												<h2>I'm a passionate and hardworking individual </h2>
-												<p><a href="https://drive.google.com/file/d/15c_c9JR8Dz2QCeZFVEYGwVVjIRzUKxQk/view?usp=drive_link" class="btn btn-primary btn-learn" target="_blank" rel="noopener noreferrer" style="cursor: pointer;">View Resume <i class="icon-briefcase3"></i></a></p>
+												<p><a href="https://drive.google.com/file/d/1Bl2c0PPjPlxRUfRJK0ZbLniYkByvlhWz/view?usp=drive_link" class="btn btn-primary btn-learn" target="_blank" rel="noopener noreferrer" style="cursor: pointer;">View Resume <i class="icon-briefcase3"></i></a></p>
 											</div>
 										</div>
 									</div>
