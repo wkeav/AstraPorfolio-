@@ -1,0 +1,493 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Astra | Personal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Add some custom CSS for this page -->
+        <style>
+            .hobby-box {
+                padding: 20px;
+                margin-bottom: 30px;
+                border-radius: 10px;
+                background: #f8f9fa;
+                transition: transform 0.3s ease;
+            }
+            .hobby-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            .section-title {
+                font-size: 2.5em;
+                margin-bottom: 30px;
+                color: #2c98f0;
+            }
+            .quote-box {
+                padding: 30px;
+                background: #2c98f0;
+                color: white;
+                border-radius: 10px;
+                margin: 20px 0;
+            }
+            .gallery-img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                transition: transform 0.3s ease;
+            }
+            .gallery-img:hover {
+                transform: scale(1.05);
+            }
+        </style>
+	<!-- Dark Mode & Header Navigation Styles -->
+	<style>
+		:root {
+			--bg-color: #ffffff;
+			--text-color: #333333;
+			--header-bg: #ffffff;
+			--header-border: #e9ecef;
+			--footer-bg: #f8f9fa;
+			--footer-border: #e9ecef;
+			--footer-text: #6c757d;
+			--section-bg: #ffffff;
+			--card-bg: #f8f9fa;
+			--border-color: #e9ecef;
+			--shadow: rgba(0,0,0,0.05);
+		}
+
+		[data-theme="dark"] {
+			--bg-color: #121212;
+			--text-color: #ffffff;
+			--header-bg: #121212;
+			--header-border: #333333;
+			--footer-bg: #121212;
+			--footer-border: #333333;
+			--footer-text: #cccccc;
+			--section-bg: #1e1e1e;
+			--card-bg: #252525;
+			--border-color: #333333;
+			--shadow: rgba(0,0,0,0.5);
+		}
+
+		body {
+			background-color: var(--bg-color);
+			color: var(--text-color);
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+
+		.top-header {
+			background-color: var(--header-bg);
+			padding: 20px 0;
+			border-bottom: 1px solid var(--header-border);
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			box-shadow: 0 2px 4px var(--shadow);
+			transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+		.header-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header-name-container {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.header-name {
+			font-size: 24px;
+			font-weight: 600;
+			color: var(--text-color);
+			text-decoration: none;
+			font-family: 'Quicksand', sans-serif;
+			transition: color 0.3s ease;
+		}
+		.header-name:hover {
+			color: #2c98f0;
+			text-decoration: none;
+		}
+		.header-cat {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.header-nav {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			gap: 30px;
+			align-items: center;
+		}
+		.header-nav li {
+			margin: 0;
+		}
+		.header-nav a {
+			color: var(--text-color);
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: 400;
+			position: relative;
+			padding: 5px 0;
+			transition: color 0.3s ease;
+			font-family: 'Quicksand', sans-serif;
+		}
+		.header-nav a:hover {
+			color: #2c98f0;
+		}
+		.header-nav a.active {
+			color: var(--text-color);
+		}
+		.header-nav a.active::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #dc3545;
+		}
+
+		/* Theme Toggle Button */
+		.theme-toggle {
+			background: none;
+			border: 1px solid var(--border-color);
+			color: var(--text-color);
+			cursor: pointer;
+			padding: 8px 12px;
+			border-radius: 5px;
+			font-size: 18px;
+			transition: all 0.3s ease;
+			margin-left: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			z-index: 1001;
+			pointer-events: auto;
+		}
+		.theme-toggle:hover {
+			background-color: var(--card-bg);
+			border-color: #2c98f0;
+		}
+		.theme-toggle:focus {
+			outline: none;
+			box-shadow: 0 0 0 2px rgba(44, 152, 240, 0.3);
+		}
+		.theme-toggle span {
+			pointer-events: none;
+			user-select: none;
+		}
+
+		/* Dark mode styles */
+		[data-theme="dark"] .colorlib-narrow-content,
+		[data-theme="dark"] .hobby-box {
+			background-color: var(--card-bg);
+			color: var(--text-color);
+		}
+
+		[data-theme="dark"] .quote-box {
+			background-color: #2c98f0;
+		}
+
+		[data-theme="dark"] footer {
+			background-color: var(--footer-bg);
+			border-top-color: var(--footer-border);
+		}
+
+		[data-theme="dark"] footer p,
+		[data-theme="dark"] footer a {
+			color: var(--footer-text);
+		}
+
+		/* Enhanced visibility for dark mode text */
+		[data-theme="dark"] .section-title,
+		[data-theme="dark"] .hobby-box h3,
+		[data-theme="dark"] .hobby-box p,
+		[data-theme="dark"] .hobby-box ul,
+		[data-theme="dark"] .hobby-box li,
+		[data-theme="dark"] .quote-box h3,
+		[data-theme="dark"] .colorlib-heading,
+		[data-theme="dark"] .container-wrap,
+		[data-theme="dark"] body {
+			color: #ffffff !important;
+		}
+
+		[data-theme="dark"] .hobby-box li {
+			color: #cccccc !important;
+		}
+
+		/* Main page containers */
+		[data-theme="dark"] .container-wrap,
+		[data-theme="dark"] body {
+			background-color: var(--bg-color);
+		}
+
+		@media (max-width: 768px) {
+			.header-container {
+				flex-direction: column;
+				gap: 15px;
+			}
+			.header-nav {
+				gap: 20px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.theme-toggle {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+	</style>
+    </head>
+    <body>
+	<!-- Top Header Navigation -->
+	<header class="top-header">
+		<div class="header-container">
+			<div class="header-name-container">
+				<a href="index.html" class="header-name">Astra Nguyen</a>
+				<img src="images/cat.png" alt="Cat" class="header-cat">
+			</div>
+			<nav>
+				<ul class="header-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#projects">Projects</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+					<li><a href="personal.html" class="active">Personal</a></li>
+					<li>
+						<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+							<span id="themeIcon">☾</span>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+        <div class="container-wrap">
+            <div class="colorlib-narrow-content">
+                <!-- Header Section -->
+                <div class="row">
+                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                        <h1 class="section-title text-center">Beyond The Code</h1>
+                        <div class="quote-box text-center">
+                            <h3>"Life is not just about coding, it's about creating memories and pursuing passions."</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobbies Section -->
+                <div class="row">
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                        <div class="hobby-box">
+                            <h3><i class="icon-camera"></i> Traveling</h3>
+                            <p>Discovering new cultures and places. Going on different adventures either by backpacking or road trips. Love exploring local cuisines, 
+                            learning about different traditions, and making connections with people around the world.</p>
+
+                            <ul>
+                                <li>Asia - Vietnam, Thailand, South Korea, Indonesia</li>
+                                <li>Europe - France, Spain, England, Italy, Monaco</li>
+                                <li>North America - California, Colorado, New York, Utah, Texas, Florida, Hawaii, Mexico, Bahamas</li>
+                                <li>Canada - Montreal, Quebec</li>
+                                <li>South America - Chile, Peru, Brazil</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                        <div class="hobby-box">
+                            <h3><i class="icon-book"></i> Outdoorsy</h3>
+                            <p>Passionate about outdoor adventures and staying active. Love exploring nature through hiking, backpacking, rock climbing, trail running, surfing and wild swimming. Always seeking beautiful landscapes to discover.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+                        <div class="hobby-box">
+                            <h3><i class="icon-plane"></i> Reading</h3>
+                            <p>Passionate about exploring different worlds through literature. 
+                                Love diving into fictional and romance novels. 
+                                Find solace in poetry about life, feelings, and love. Constantly seeking self-improvement through 
+                                theoretical and life-changing books that challenge perspectives.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="row">
+                    <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                        <h2 class="colorlib-heading">Photo Gallery</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                        <img src="images/Paris.JPG" alt="Paris" class="gallery-img">
+                    </div>
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                        <img src="images/Monaco.JPG" alt="Monaco" class="gallery-img">
+                    </div>
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+                        <img src="images/Tenerife.JPG" alt="Tenerife" class="gallery-img">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                        <img src="images/Bahamas.JPG" alt="Bahamas" class="gallery-img">
+                    </div>
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                        <img src="images/Diving.JPG" alt="Diving" class="gallery-img">
+                    </div>
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+                        <img src="images/Utah.JPG" alt="Utah" class="gallery-img">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                            <img src="images/1.JPG" alt="Vietnam Mountain" class="gallery-img">
+                        </div>
+                        <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                            <img src="images/2.JPG" alt="Airplane" class="gallery-img">
+                        </div>
+                        <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+                            <img src="images/3.JPG" alt="Mexico" class="gallery-img">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                                <img src="images/4.JPG" alt="Private jet" class="gallery-img">
+                            </div>
+                            <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                <img src="images/5.jpg" alt="Bahamas" class="gallery-img">
+                            </div>
+                            <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+                                <img src="images/6.JPG" alt="Mexico" class="gallery-img">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                                    <img src="images/7.JPG" alt="Private jet" class="gallery-img">
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+                                    <img src="images/8.jpg" alt="Bahamas" class="gallery-img">
+                                </div>
+                                <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+                                    <img src="images/9.JPG" alt="Mexico" class="gallery-img">
+                                </div>
+                </div>
+
+                </div>
+
+    
+
+                <!-- Back Button -->
+                <div class="row">
+                    <div class="col-md-12 text-center animate-box" data-animate-effect="fadeInUp">
+                        <p><a href="index.html" class="btn btn-primary btn-lg"><i class="icon-arrow-left"></i> Back to Portfolio</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer style="background-color: var(--footer-bg); padding: 30px 0; border-top: 1px solid var(--footer-border); margin-top: 50px;">
+            <div class="container">
+                <div class="row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                    <div class="col-md-6 col-xs-12" style="color: var(--footer-text); font-size: 14px; margin-bottom: 10px; text-align: center;">
+                        <p style="margin: 0;">&copy; <script>document.write(new Date().getFullYear());</script> Astra Nguyen. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 col-xs-12" style="text-align: center;">
+                        <a href="https://github.com/wkeav" target="_blank" rel="noopener noreferrer" style="color: var(--footer-text); font-size: 20px; margin: 0 10px; text-decoration: none; transition: color 0.3s ease; display: inline-block;">
+                            <i class="icon-github" style="vertical-align: middle;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/astra-n-40b024259" target="_blank" rel="noopener noreferrer" style="color: var(--footer-text); font-size: 20px; margin: 0 10px; text-decoration: none; transition: color 0.3s ease; display: inline-block;">
+                            <i class="icon-linkedin2" style="vertical-align: middle;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <style>
+                footer a:hover {
+                    color: #2c98f0 !important;
+                }
+                @media (min-width: 768px) {
+                    footer .col-md-6:first-child {
+                        text-align: left;
+                    }
+                    footer .col-md-6:last-child {
+                        text-align: right;
+                    }
+                }
+            </style>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script src="js/main.js"></script>
+		
+		<!-- Theme Toggle & Header Navigation Script -->
+		<script>
+			// Theme Toggle Functionality
+			function initTheme() {
+				const theme = localStorage.getItem('theme') || 'light';
+				document.documentElement.setAttribute('data-theme', theme);
+				updateThemeIcon(theme);
+			}
+
+			function toggleTheme() {
+				const currentTheme = document.documentElement.getAttribute('data-theme');
+				const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+				document.documentElement.setAttribute('data-theme', newTheme);
+				localStorage.setItem('theme', newTheme);
+				updateThemeIcon(newTheme);
+			}
+
+			function updateThemeIcon(theme) {
+				const themeIcon = document.getElementById('themeIcon');
+				if (themeIcon) {
+					themeIcon.textContent = theme === 'dark' ? '𖤓' : '☾';
+				}
+			}
+
+			// Initialize theme on page load
+			initTheme();
+
+			// Theme toggle - use both vanilla JS and jQuery for reliability
+			document.addEventListener('DOMContentLoaded', function() {
+				const themeToggle = document.getElementById('themeToggle');
+				if (themeToggle) {
+					themeToggle.addEventListener('click', function(e) {
+						e.preventDefault();
+						e.stopPropagation();
+						toggleTheme();
+					});
+				}
+			});
+
+			$(document).ready(function() {
+				// Theme toggle button (jQuery fallback)
+				$('#themeToggle').on('click', function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					toggleTheme();
+				});
+
+				// Set Personal as active on personal.html
+				$('.header-nav a[href="personal.html"]').addClass('active').parent('li').addClass('active');
+			});
+		</script>
+    </body>
+</html>

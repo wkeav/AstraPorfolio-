@@ -1,0 +1,1152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Astra's Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Portfolio website for Astra Nguyen - Computer Science Student" />
+	<meta name="keywords" content="portfolio, computer science, software engineering, web development" />
+	<meta name="author" content="Astra Nguyen" />
+
+  
+	<meta property="og:title" content="Astra Nguyen - Portfolio"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Astra's Portfolio"/>
+	<meta property="og:description" content="Portfolio website for Astra Nguyen - Computer Science Student"/>
+	<meta name="twitter:title" content="Astra Nguyen - Portfolio" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Custom CSS for Personal Section -->
+	<style>
+		.personal-description {
+			font-size: 18px;
+			line-height: 1.8;
+			margin-bottom: 30px;
+			color: #666;
+		}
+		.personal-highlights {
+			margin: 40px 0;
+		}
+		.personal-item {
+			padding: 30px 20px;
+			text-align: center;
+			background: #f8f9fa;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			transition: all 0.3s ease;
+			border: 2px solid transparent;
+		}
+		.personal-item:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 25px rgba(44, 152, 240, 0.15);
+			border-color: #2c98f0;
+		}
+		.personal-item h4 {
+			margin: 15px 0 10px 0;
+			color: #2c98f0;
+			font-weight: 600;
+		}
+		.personal-item p {
+			color: #666;
+			font-size: 14px;
+			line-height: 1.6;
+		}
+		.personal-cta {
+			margin-top: 40px;
+		}
+		.personal-cta .btn {
+			padding: 15px 30px;
+			font-size: 16px;
+			font-weight: 500;
+			transition: all 0.3s ease;
+		}
+		.personal-cta .btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 5px 15px rgba(44, 152, 240, 0.3);
+		}
+	</style>
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<!-- Dark Mode & Header Navigation Styles -->
+	<style>
+		:root {
+			--bg-color: #ffffff;
+			--text-color: #333333;
+			--header-bg: #ffffff;
+			--header-border: #e9ecef;
+			--footer-bg: #f8f9fa;
+			--footer-border: #e9ecef;
+			--footer-text: #6c757d;
+			--section-bg: #ffffff;
+			--card-bg: #f8f9fa;
+			--border-color: #e9ecef;
+			--shadow: rgba(0,0,0,0.05);
+		}
+
+		[data-theme="dark"] {
+			--bg-color: #121212;
+			--text-color: #ffffff;
+			--header-bg: #121212;
+			--header-border: #333333;
+			--footer-bg: #121212;
+			--footer-border: #333333;
+			--footer-text: #cccccc;
+			--section-bg: #1e1e1e;
+			--card-bg: #252525;
+			--border-color: #333333;
+			--shadow: rgba(0,0,0,0.5);
+		}
+
+		body {
+			background-color: var(--bg-color);
+			color: var(--text-color);
+			transition: background-color 0.3s ease, color 0.3s ease;
+		}
+
+		.top-header {
+			background-color: var(--header-bg);
+			padding: 20px 0;
+			border-bottom: 1px solid var(--header-border);
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			box-shadow: 0 2px 4px var(--shadow);
+			transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+		.header-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header-name-container {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.header-name {
+			font-size: 24px;
+			font-weight: 600;
+			color: var(--text-color);
+			text-decoration: none;
+			font-family: 'Quicksand', sans-serif;
+			transition: color 0.3s ease;
+		}
+		.header-name:hover {
+			color: #2c98f0;
+			text-decoration: none;
+		}
+		.header-cat {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.header-nav {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			gap: 30px;
+			align-items: center;
+		}
+		.header-nav li {
+			margin: 0;
+		}
+		.header-nav a {
+			color: var(--text-color);
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: 400;
+			position: relative;
+			padding: 5px 0;
+			transition: color 0.3s ease;
+			font-family: 'Quicksand', sans-serif;
+		}
+		.header-nav a:hover {
+			color: #2c98f0;
+		}
+		.header-nav a.active {
+			color: var(--text-color);
+		}
+		.header-nav a.active::after,
+		.header-nav a[data-nav-section].active::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #dc3545;
+		}
+		.header-nav li.active a::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #dc3545;
+		}
+
+		/* Theme Toggle Button */
+		.theme-toggle {
+			background: none;
+			border: 1px solid var(--border-color);
+			color: var(--text-color);
+			cursor: pointer;
+			padding: 8px 12px;
+			border-radius: 5px;
+			font-size: 18px;
+			transition: all 0.3s ease;
+			margin-left: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			z-index: 1001;
+			pointer-events: auto;
+		}
+		.theme-toggle:hover {
+			background-color: var(--card-bg);
+			border-color: #2c98f0;
+		}
+		.theme-toggle:focus {
+			outline: none;
+			box-shadow: 0 0 0 2px rgba(44, 152, 240, 0.3);
+		}
+		.theme-toggle span {
+			pointer-events: none;
+			user-select: none;
+		}
+
+		/* Dark mode styles for sections */
+		[data-theme="dark"] .colorlib-narrow-content,
+		[data-theme="dark"] .colorlib-about,
+		[data-theme="dark"] .colorlib-experience,
+		[data-theme="dark"] .colorlib-projects,
+		[data-theme="dark"] .colorlib-education,
+		[data-theme="dark"] .colorlib-contact,
+		[data-theme="dark"] .colorlib-personal {
+			background-color: var(--section-bg);
+			color: var(--text-color);
+		}
+
+		[data-theme="dark"] .project-item,
+		[data-theme="dark"] .hobby-box,
+		[data-theme="dark"] .personal-item {
+			background-color: var(--card-bg);
+			border-color: var(--border-color);
+		}
+
+		[data-theme="dark"] footer {
+			background-color: var(--footer-bg);
+			border-top-color: var(--footer-border);
+		}
+
+		[data-theme="dark"] footer p,
+		[data-theme="dark"] footer a {
+			color: var(--footer-text);
+		}
+
+		/* Enhanced visibility for dark mode text */
+		[data-theme="dark"] .about-desc,
+		[data-theme="dark"] .panel-body,
+		[data-theme="dark"] .colorlib-heading,
+		[data-theme="dark"] .heading-meta,
+		[data-theme="dark"] .services h3,
+		[data-theme="dark"] .panel-title,
+		[data-theme="dark"] .panel-title a,
+		[data-theme="dark"] .panel-body p,
+		[data-theme="dark"] .panel-body ul,
+		[data-theme="dark"] .panel-body li {
+			color: #ffffff !important;
+		}
+
+		/* Experience section - Blue text for better visibility in dark mode */
+		[data-theme="dark"] .colorlib-experience .timeline-label,
+		[data-theme="dark"] .colorlib-experience .timeline-label h2,
+		[data-theme="dark"] .colorlib-experience .timeline-label h2 a,
+		[data-theme="dark"] .colorlib-experience .timeline-label p {
+			color: #2c98f0 !important;
+		}
+
+		[data-theme="dark"] .colorlib-experience .timeline-label span {
+			color: #4da6ff !important;
+		}
+
+		/* Projects section - Blue text for better visibility in dark mode */
+		[data-theme="dark"] .colorlib-projects .project-description,
+		[data-theme="dark"] .colorlib-projects .project-item h3,
+		[data-theme="dark"] .colorlib-projects .project-item h3 a,
+		[data-theme="dark"] .colorlib-projects .project-item p,
+		[data-theme="dark"] .colorlib-projects .project-item ul,
+		[data-theme="dark"] .colorlib-projects .project-item li {
+			color: #2c98f0 !important;
+		}
+
+		/* Override inline styles in project items for dark mode */
+		[data-theme="dark"] .colorlib-projects .project-item p[style*="color"],
+		[data-theme="dark"] .colorlib-projects .project-item ul[style*="color"],
+		[data-theme="dark"] .colorlib-projects .project-item li[style*="color"] {
+			color: #2c98f0 !important;
+		}
+
+		/* Make icons and colored elements more vibrant in dark mode */
+		[data-theme="dark"] .services .icon2,
+		[data-theme="dark"] .timeline-icon {
+			opacity: 1;
+		}
+
+		/* Improve contrast for links */
+		[data-theme="dark"] a {
+			color: #4da6ff;
+		}
+
+		[data-theme="dark"] a:hover {
+			color: #2c98f0;
+		}
+
+		/* Main page containers */
+		[data-theme="dark"] #colorlib-page,
+		[data-theme="dark"] .container-wrap,
+		[data-theme="dark"] #colorlib-main {
+			background-color: var(--bg-color);
+		}
+
+		/* Section backgrounds */
+		[data-theme="dark"] section {
+			background-color: var(--section-bg);
+		}
+
+		/* Slider text visibility */
+		[data-theme="dark"] .slider-text,
+		[data-theme="dark"] .slider-text-inner,
+		[data-theme="dark"] .slider-text h1,
+		[data-theme="dark"] .slider-text h2 {
+			color: #ffffff !important;
+		}
+
+		/* Form elements */
+		[data-theme="dark"] .form-control {
+			background-color: var(--card-bg);
+			border-color: var(--border-color);
+			color: #ffffff;
+		}
+
+		[data-theme="dark"] .form-control:focus {
+			background-color: var(--card-bg);
+			border-color: #2c98f0;
+			color: #ffffff;
+		}
+
+		[data-theme="dark"] .form-control::placeholder {
+			color: #999999;
+		}
+
+		/* Panel styling */
+		[data-theme="dark"] .panel-default {
+			background-color: var(--card-bg);
+			border-color: var(--border-color);
+		}
+
+		[data-theme="dark"] .panel-heading {
+			background-color: var(--card-bg);
+			border-color: var(--border-color);
+		}
+
+		@media (max-width: 768px) {
+			.header-container {
+				flex-direction: column;
+				gap: 15px;
+			}
+			.header-nav {
+				gap: 20px;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			.theme-toggle {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+	</style>
+	</head>
+	<body>
+	<!-- Top Header Navigation -->
+	<header class="top-header">
+		<div class="header-container">
+			<div class="header-name-container">
+				<a href="index.html" class="header-name">Astra Nguyen</a>
+				<img src="images/cat.png" alt="Cat" class="header-cat">
+			</div>
+			<nav>
+				<ul class="header-nav">
+					<li><a href="#" data-nav-section="home" class="active">Home</a></li>
+					<li><a href="#" data-nav-section="about">About</a></li>
+					<li><a href="#" data-nav-section="projects">Projects</a></li>
+					<li><a href="#" data-nav-section="contact">Contact</a></li>
+					<li><a href="personal.html">Personal</a></li>
+					<li>
+						<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+							<span id="themeIcon">☾</span>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		
+		<!-- Sidebar Section -->
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(images/me.png);"></div>
+				<h1 id="colorlib-logo"><a href="index.html">Astra Nguyen</a></h1>
+				<span class="position"><a href="#">Computer Science Student </a> seeking for internships</span>
+			</div>
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="about">About</a></li>
+						<li><a href="#" data-nav-section="experience">Experience</a></li>
+						<li><a href="#" data-nav-section="projects">Projects</a></li>
+						<li><a href="#" data-nav-section="education">Education</a></li>
+						<li><a href="#" data-nav-section="personal">Personal</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="colorlib-footer">
+				<p><small>
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart" aria-hidden="true"></i> by Astra
+				</small></p>
+				<ul>
+					<li><a href="#"><i class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i class="icon-twitter2"></i></a></li>
+					<li><a href="#"><i class="icon-instagram"></i></a></li>
+					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
+				</ul>
+			</div>
+		</aside>
+		
+		<div id="colorlib-main">
+			<!-- Home Section -->
+			<section id="colorlib-hero" class="js-fullheight" data-section="home">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+						<li style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+							<div class="overlay"></div>
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+										<div class="slider-text-inner js-fullheight">
+											<div class="desc">
+												<h1>Allo! <br>I'm Astra</h1>
+												<h2></h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li style="background: linear-gradient(135deg, #2c98f0 0%, #667eea 100%);">
+							<div class="overlay"></div>
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+										<div class="slider-text-inner">
+											<div class="desc">
+												<h1>I am looking for a Software Engineer internship!</h1>
+												<h2>I'm a passionate and hardworking individual </h2>
+												<p><a href="" class="btn btn-primary btn-learn" target="_blank" rel="noopener noreferrer" style="cursor: pointer;">View Resume <i class="icon-briefcase3"></i></a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- About Section -->
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<!-- Social Media Icons -->
+								<div class="col-md-12 text-center">
+									<div class="social-links">
+										<a href="https://www.linkedin.com/in/astra-n-40b024259" target="_blank" class="social-icon">
+											<i class="icon-linkedin2" style="font-size: 24px; margin: 0 10px; color: #2c98f0;"></i>
+										</a>
+										<a href="mailto:Astra.k.nguyen05@outlook.com" class="social-icon">
+											<i class="icon-mail2" style="font-size: 24px; margin: 0 10px; color: #2c98f0;"></i>
+										</a>
+										<a href="https://github.com/wkeav" target="_blank" class="social-icon">
+											<i class="icon-github" style="font-size: 24px; margin: 0 10px; color: #2c98f0;"></i>
+										</a>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta">About Me</span>
+										<h2 class="colorlib-heading">Who Am I?</h2>
+										<p><strong>Hi, my name is Astra.</strong> I'm currently a Computer Science Student at the University of Oklahoma.</p>
+										<p>As a child, I've always viewed technology as something magical. After taking my first Intro Programming course at the University of Oklahoma, it was then that I realized my passion for programming and technology innovation. 
+											<br><br> To me, the <strong>biggest appeal and excitement</strong> of computer science is the satisfaction of <strong>transforming</strong> an idea or an image, into a real-world solution that can make a tangible impact. It's amazing the <strong>power a computer can hold and innovate.</strong> Through my learning process at the University of Oklahoma, I plan to enhance my technical skills, creative skills, and soft skills to build meaningful innovations, and I look forward to leveraging my education to drive technology solutions that matter and change the world.</p>
+											<p>Other than software development, I am a hybrid athlete. I love running, biking, swimming, and lifting weights to challenge myself every day.  </p>
+										<p>"Learning is life. Worry not if you don't understand a concept, and keep the show going"</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+									<div class="services color-1">
+										<span class="icon2"><i class="icon-bulb"></i></span>
+										<h3>Technology Innovation</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+									<div class="services color-3">
+										<span class="icon2"><i class="icon-data"></i></span>
+										<h3>Software Development</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-globe-outline"></i></span>
+										<h3>Web Development</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+									<div class="services color-4">
+										<span class="icon2"><i class="icon-phone3"></i></span>
+										<h3>Mobile Development</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Experience</span>
+							<h2 class="colorlib-heading animate-box">Work Experience</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="timeline-centered">
+<!-- 								<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+									<div class="timeline-entry-inner">
+										<div class="timeline-icon color-1">
+											<i class="icon-pen2"></i>
+										</div>
+										<div class="timeline-label">
+											<h2><a href="#">Extern | Amazon Operational Strategy & People Analytics </a> <span>August 2025 - Present</span></h2>
+											<span>Externship - Remote </span>
+											<p>• Analyzed unstructured employee feedback to identify workforce attrition risks, productivity blockers, and key operational pain points
+within Amazon Fulfillment Centers.</p>
+											<p>• Created segmented cohort profiles using qualitative data analysis and thematic coding to surface role-specific challenges and give
+recommendations.</p>
+											<p>• Developed business-ready briefing notes and strategy decks synthesizing frontline insights into actionable operational recommen-
+dations</p>
+										</div>
+									</div>
+								</article> -->
+
+								<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+									<div class="timeline-entry-inner">
+										<div class="timeline-icon color-2">
+											<i class="icon-pen2"></i>
+										</div>
+										<div class="timeline-label">
+											<h2><a href="#">Standard Bank</a> <span>May 2025 - August 2025</span></h2>
+											<span>Software Engineer Intern - New York, NY</span>
+											<p>• Built a web server application using Java Spring Boot to manage employee data, implementing RESTful APIs for CRUD operations and JSON data handling, tested with Postman and Mockito</p>
+											<p>• Implemented user authentication system using Spring Security and JWT tokens, ensuring secure access to employee management APIs and protecting sensitive data</p>
+											<p>• Collaborating with senior developers to understand enterprise-level software development practices and security best practices</p>
+										</div>
+									</div>
+								</article>
+
+								<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+									<div class="timeline-entry-inner">
+										<div class="timeline-icon color-2">
+											<i class="icon-pen2"></i>
+										</div>
+										<div class="timeline-label">
+											<h2><a href="#">University of Oklahoma - Gallogly College of Engineering</a> <span>May 2025 - Present</span></h2>
+											<span>Researcher - Norman, OK</span>
+											<p>• Working with Ph.D. students to develop deep learning models using TensorFlow for medical image classification and segmentation to guide endoscopic surgeries</p>
+											<p>• Obtain different medical imaging datasets and train models on GPU servers to get optimal analysis to guide endoscopic surgeries</p>
+											<p>• Contributing to research that enhances surgical precision through AI-driven medical imaging analysis</p>
+										</div>
+									</div>
+								</article>
+
+								<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+									<div class="timeline-entry-inner">
+										<div class="timeline-icon color-3">
+											<i class="icon-pen2"></i>
+										</div>
+										<div class="timeline-label">
+											<h2><a href="#">eBay Engineering Pathways Program</a> <span>June 2025 - August 2025</span></h2>
+											<span>Apprenticeship - Remote</span>
+											<p>• Engaging with senior eBay engineers to develop problem-solving skills and industry best practices through structured mentorship sessions</p>
+											<p>• Practicing advanced data structure and algorithm problems on the CodeSignal platform to enhance technical problem-solving capabilities</p>
+											<p>• Building professional network and gaining insights into enterprise software development practices and career pathways</p>
+										</div>
+									</div>
+								</article>
+
+								<article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+									<div class="timeline-entry-inner">
+										<div class="timeline-icon color-4">
+											<i class="icon-pen2"></i>
+										</div>
+										<div class="timeline-label">
+											<h2><a href="#">Business Web Solutions</a> <span>May 2024 - October 2024</span></h2>
+											<span>Full-Stack Developer - Remote</span>
+											<p>• Addressed client needs for modern, responsive web applications by developing full-stack solutions using HTML, CSS3, JavaScript, and backend technologies to create dynamic, user-friendly websites from scratch</p>
+											<p>• Redesigned and revamped existing websites by applying modern web development best practices, implementing responsive design principles, and optimizing performance to improve user experience and client satisfaction</p>
+											<p>• Collaborated with team members to deliver client projects on time, building problem-solving skills and technical expertise in web devel-
+opment</p>
+										</div>
+									</div>
+								</article>
+
+								<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+									<div class="timeline-entry-inner">
+										<div class="timeline-icon color-1">
+											<i class="icon-pen2"></i>
+										</div>
+										<div class="timeline-label">
+											<h2><a href="#">Outlier (Freelance)</a> <span>Aug. 2024 - Jan. 2025</span></h2>
+											<span>Coding Expertise for AI Training - Oakland, California</span>
+											<p>• Enhanced AI response quality by systematically evaluating 100+ prompts across programming (Java, Python, C#, JavaScript), mathematics, and research, improving AI accuracy</p>
+											<p>• Optimized technical solutions and collaborated with cross-functional teams to integrate AI models into practical workflows</p>
+											<p>• Developed and refined code generation strategies for real-world applications, maintaining high user satisfaction and technical accuracy across diverse programming domains</p>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-projects" data-section="projects">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Projects</span>
+							<h2 class="colorlib-heading animate-box">Recent Projects</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center animate-box">
+							<p class="project-description">Here are some of my recent projects that showcase my skills in software engineering, web development, and creative problem-solving. Each project represents a unique challenge and learning experience.</p>
+							<p>Click on them to get to know more about them!</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project-item" style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #2c98f0;">
+								<h3 style="color: #2c98f0; margin-bottom: 15px;"><a href="https://github.com/cfgtexas25/Team-34" style="color: #2c98f0; text-decoration: none;">JP Morgan Code for Good Hackathon</a></h3>
+								<p style="color: #666; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Partnered with Black Heart Association (BHA) to address scheduling and prioritization challenges in their mission to improve heart health in underserved communities by developing Pulse, a full-stack web application using React frontend with Flask backend, integrating Fireworks AI chatbot, NewsAPI for real-time health news, and Leaflet.js interactive mapping for strategic community targeting.</p>
+								<ul style="color: #666; margin-bottom: 15px;">
+									<li>AI-powered chatbot for health policy guidance</li>
+									<li>Interactive mapping for community targeting</li>
+									<li>Real-time health news integration</li>
+								</ul>
+								<p class="icon">
+									<span><a href="https://github.com/cfgtexas25/Team-34" style="color: #2c98f0;"><i class="icon-share3"></i> View Project</a></span>
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+							<div class="project-item" style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #2c98f0;">
+								<h3 style="color: #2c98f0; margin-bottom: 15px;"><a href="https://github.com/wkeav/Adventure_Generator" style="color: #2c98f0; text-decoration: none;">Adventure Generator</a></h3>
+								<p style="color: #666; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Adventure Generator is a full-stack web application that combines mood-based recommendations with real-time weather data to suggest perfect activities for couples and friends. Whether you're together or miles apart, find your next memorable adventure!</p>
+								<ul style="color: #666; margin-bottom: 15px;">
+									<li>Real-time adventure generator depends on user's mood and current weather!</li>
+									<li>User authentication</li>
+									<li>Beautiful UI</li>
+								</ul>
+								<p class="icon">
+									<span><a href="https://github.com/wkeav/Adventure_Generator" style="color: #2c98f0;"><i class="icon-share3"></i> View Project</a></span>
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project-item" style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #2c98f0;">
+								<h3 style="color: #2c98f0; margin-bottom: 15px;"><a href="https://github.com/wkeav/Boot_Inventory_Management" style="color: #2c98f0; text-decoration: none;">Boot Inventory Management</a></h3>
+								<p style="color: #666; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">A full-stack inventory management system using Spring Boot and H2 database for efficient boot tracking and management.</p>
+								<ul style="color: #666; margin-bottom: 15px;">
+									<li>Enabling real-time boot tracking</li>
+									<li>Inventory modifications for 7 different brand boots</li>
+									<li>Search functionality</li>
+								</ul>
+								<p class="icon">
+									<span><a href="https://github.com/wkeav/Boot_Inventory_Management" style="color: #2c98f0;"><i class="icon-share3"></i> View Project</a></span>
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+							<div class="project-item" style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #2c98f0;">
+								<h3 style="color: #2c98f0; margin-bottom: 15px;"><a href="https://github.com/wkeav/java-projects" style="color: #2c98f0; text-decoration: none;">Java Projects</a></h3>
+								<p style="color: #666; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Comprehensive collection of Java applications demonstrating proficiency in object-oriented programming, design patterns, and enterprise development practices.</p>
+								<p class="icon">
+									<span><a href="https://github.com/wkeav/java-projects" style="color: #2c98f0;"><i class="icon-share3"></i> View Project</a></span>
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project-item" style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #2c98f0;">
+								<h3 style="color: #2c98f0; margin-bottom: 15px;"><a href="https://github.com/wkeav/React-Todo" style="color: #2c98f0; text-decoration: none;">React Todo</a></h3>
+								<p style="color: #666; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Built a responsive Todo application using React.js, featuring dynamic date updates, CRUD operations, and real-time task management capabilities.</p>
+								<p class="icon">
+									<span><a href="https://github.com/wkeav/React-Todo" style="color: #2c98f0;"><i class="icon-share3"></i> View Project</a></span>
+								</p>
+							</div>
+						</div>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInRight">
+							<div class="project-item" style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #2c98f0;">
+								<h3 style="color: #2c98f0; margin-bottom: 15px;"><a href="https://github.com/wkeav/CurrencyConverter" style="color: #2c98f0; text-decoration: none;">Currency Converter</a></h3>
+								<p style="color: #666; margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Developed a Python-based currency converter with real-time exchange rate integration and terminal-based user interface.</p>
+								<ul style="color: #666; margin-bottom: 15px;">
+									<li>Integrates with real-time exchange rate APIs</li>
+									<li>Supports multiple currency conversions</li>
+									<li>Provides terminal-based user interface</li>
+									<li>Handles dynamic currency rate updates</li>
+								</ul>
+								<p class="icon">
+									<span><a href="https://github.com/wkeav/CurrencyConverter" style="color: #2c98f0;"><i class="icon-share3"></i> View Project</a></span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Education Section -->
+			<section class="colorlib-education" data-section="education">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Education</span>
+							<h2 class="colorlib-heading animate-box">Education</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<!-- Bachelor Degree Panel -->
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													Bachelor Degree in Computer Science
+												</a>
+											</h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-6">
+														<p>Aug. 2023 - Dec. 2026</p>
+														<p>Currently a student at the University of Oklahoma, studying for a Bachelor of Science in Computer Science, minoring in Biology.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Technical Skills Panel -->
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													Technical Skills
+												</a>
+											</h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-md-6">
+														<p><strong>Programming Languages:</strong></p>
+														<ul>
+															<li>Java</li>
+															<li>C#</li>
+															<li>C++</li>
+															<li>Python</li>
+															<li>JavaScript</li>
+															<li>SQL</li>
+															<li>HTML/CSS</li>
+															<li>Dart</li>
+														</ul>
+														<p><strong>Frontend:</strong></p>
+														<ul>
+															<li>React.js</li>
+															<li>Flutter</li>
+															<li>HTML/CSS</li>
+															<li>JavaScript</li>
+															<li>Responsive Design</li>
+														</ul>
+													</div>
+													<div class="col-md-6">
+														<p><strong>Backend:</strong></p>
+														<ul>
+															<li>Spring Boot</li>
+															<li>Django</li>
+															<li>Flask</li>
+															<li>REST APIs</li>
+															<li>JWT Authentication</li>
+															<li>Spring Security</li>
+															<li>PostgreSQL</li>
+														</ul>
+														<p><strong>DevOps:</strong></p>
+														<ul>
+															<li>Docker</li>
+															<li>Git</li>
+															<li>CI/CD Pipeline</li>
+															<li>Azure</li>
+															<li>Postman</li>
+															<li>Software Testing</li>
+														</ul>
+														<p><strong>AI/ML/Data:</strong></p>
+														<ul>
+															<li>TensorFlow</li>
+															<li>Deep Learning</li>
+															<li>Data Analysis</li>
+															<li>Tableau</li>
+															<li>PostgreSQL</li>
+															<li>Data Structures & Algorithms</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<!-- PPL Panel -->
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													Private Pilot License (PPL)
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<!-- Add content here -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Personal Section -->
+			<section class="colorlib-personal" data-section="personal">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Beyond The Code</span>
+							<h2 class="colorlib-heading animate-box">Get to Know Me</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center animate-box" data-animate-effect="fadeInUp">
+							<p class="personal-description">While I'm passionate about technology and software engineering, there's so much more to who I am. I believe in the power of diverse experiences and interests that shape us into well-rounded individuals.</p>
+							<p>From traveling across continents to outdoor adventures, from reading diverse literature to exploring different cultures through food - these experiences fuel my creativity and problem-solving approach in tech.</p>
+							<div class="personal-highlights">
+								<div class="row">
+									<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+										<div class="personal-item">
+											<i class="icon-plane" style="font-size: 40px; color: #2c98f0;"></i>
+											<h4>Traveler</h4>
+											<p>Explored 20+ countries across 4 continents</p>
+										</div>
+									</div>
+									<div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+										<div class="personal-item">
+											<i class="icon-camera" style="font-size: 40px; color: #2c98f0;"></i>
+											<h4>Adventurer</h4>
+											<p>Hiking, rock climbing, surfing, and outdoor enthusiast</p>
+										</div>
+									</div>
+									<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+										<div class="personal-item">
+											<i class="icon-book" style="font-size: 40px; color: #2c98f0;"></i>
+											<h4>Reader</h4>
+											<p>Passionate about literature, poetry, and self-improvement</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="personal-cta">
+								<p><a href="personal.html" class="btn btn-primary btn-lg"><i class="icon-user"></i> Get to Know Me Outside of Tech</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section class="colorlib-contact" data-section="contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Get in Touch</span>
+							<h2 class="colorlib-heading">Contact</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-globe-outline"></i>
+								</div>
+								<div class="colorlib-text">
+									<p><a href="mailto:Astra.k.Nguyen05@outlook.com">Astra.k.Nguyen05@outlook.com</a></p>
+								</div>
+							</div>
+
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="colorlib-text">
+									<p>Oklahoma, United States</p>
+								</div>
+							</div>
+
+					
+						</div>
+						<div class="col-md-7 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+									<form action="">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Name">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Email">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Subject">
+										</div>
+										<div class="form-group">
+											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
+
+	<!-- Footer -->
+	<footer style="background-color: var(--footer-bg); padding: 30px 0; border-top: 1px solid var(--footer-border); margin-top: 50px;">
+		<div class="container">
+			<div class="row" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+				<div class="col-md-6 col-xs-12" style="color: var(--footer-text); font-size: 14px; margin-bottom: 10px; text-align: center;">
+					<p style="margin: 0;">&copy; <script>document.write(new Date().getFullYear());</script> Astra Nguyen. All rights reserved.</p>
+				</div>
+				<div class="col-md-6 col-xs-12" style="text-align: center;">
+					<a href="https://github.com/wkeav" target="_blank" rel="noopener noreferrer" style="color: var(--footer-text); font-size: 20px; margin: 0 10px; text-decoration: none; transition: color 0.3s ease; display: inline-block;">
+						<i class="icon-github" style="vertical-align: middle;"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/astra-n-40b024259" target="_blank" rel="noopener noreferrer" style="color: var(--footer-text); font-size: 20px; margin: 0 10px; text-decoration: none; transition: color 0.3s ease; display: inline-block;">
+						<i class="icon-linkedin2" style="vertical-align: middle;"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<style>
+			footer a:hover {
+				color: #2c98f0 !important;
+			}
+			@media (min-width: 768px) {
+				footer .col-md-6:first-child {
+					text-align: left;
+				}
+				footer .col-md-6:last-child {
+					text-align: right;
+				}
+			}
+		</style>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+	<!-- Theme Toggle & Header Navigation Script -->
+	<script>
+		// Theme Toggle Functionality
+		function initTheme() {
+			const theme = localStorage.getItem('theme') || 'light';
+			document.documentElement.setAttribute('data-theme', theme);
+			updateThemeIcon(theme);
+		}
+
+		function toggleTheme() {
+			const currentTheme = document.documentElement.getAttribute('data-theme');
+			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+			document.documentElement.setAttribute('data-theme', newTheme);
+			localStorage.setItem('theme', newTheme);
+			updateThemeIcon(newTheme);
+		}
+
+		function updateThemeIcon(theme) {
+			const themeIcon = document.getElementById('themeIcon');
+			if (themeIcon) {
+				themeIcon.textContent = theme === 'dark' ? '𖤓' : '☾';
+			}
+		}
+
+		// Initialize theme on page load
+		initTheme();
+
+		// Theme toggle - use both vanilla JS and jQuery for reliability
+		document.addEventListener('DOMContentLoaded', function() {
+			const themeToggle = document.getElementById('themeToggle');
+			if (themeToggle) {
+				themeToggle.addEventListener('click', function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					toggleTheme();
+				});
+			}
+		});
+
+		// Handle header navigation clicks
+		$(document).ready(function() {
+			// Theme toggle button (jQuery fallback)
+			$('#themeToggle').on('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				toggleTheme();
+			});
+
+			$('.header-nav a[data-nav-section]').on('click', function(e) {
+				e.preventDefault();
+				var section = $(this).data('nav-section');
+				
+				// Update active state in header
+				$('.header-nav li').removeClass('active');
+				$('.header-nav a').removeClass('active');
+				$(this).addClass('active').parent('li').addClass('active');
+				
+				// Scroll to section
+				if ($('[data-section="' + section + '"]').length) {
+					$('html, body').animate({
+						scrollTop: $('[data-section="' + section + '"]').offset().top - 80
+					}, 500);
+				}
+			});
+			
+			// Update header active state on scroll
+			var $section = $('section[data-section]');
+			$section.waypoint(function(direction) {
+				if (direction === 'down') {
+					var section = $(this.element).data('section');
+					$('.header-nav li').removeClass('active');
+					$('.header-nav a').removeClass('active');
+					$('.header-nav a[data-nav-section="' + section + '"]').addClass('active').parent('li').addClass('active');
+				}
+			}, {
+				offset: '150px'
+			});
+			
+			$section.waypoint(function(direction) {
+				if (direction === 'up') {
+					var section = $(this.element).data('section');
+					$('.header-nav li').removeClass('active');
+					$('.header-nav a').removeClass('active');
+					$('.header-nav a[data-nav-section="' + section + '"]').addClass('active').parent('li').addClass('active');
+				}
+			}, {
+				offset: '150px'
+			});
+		});
+	</script>
+
+	</body>
+</html> 
