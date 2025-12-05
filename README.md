@@ -2,7 +2,6 @@
 
 My portfolio website showcasing my projects, experience, and personal interests. Built with HTML, CSS, and JavaScript.
 
-![Portfolio Screenshot](https://github.com/user-attachments/assets/69ce5c3c-b176-4abf-b37d-d062c37c0a13)
 
 ## Features
 
